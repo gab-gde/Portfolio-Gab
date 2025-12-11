@@ -814,6 +814,15 @@ a {
     transform: scale(1.05);
 }
 
+/* Style pour les détails freelance dans la section Contact */
+.cta-details {
+  font-size: 16px;
+  color: #cbd5e1; /* Gris clair */
+  margin: 16px 0; /* Espacement autour du texte */
+  line-height: 1.6;
+  text-align: center;
+}
+
 /* ===== RESTAURANT PAGE ===== */
 .hero-restaurant {
     position: relative;
@@ -977,18 +986,20 @@ a {
     gap: 48px;
 }
 
+/* Section "Nos Spécialités" - Amélioration du contraste */
 .menu-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(245, 158, 11, 0.2);
+    background: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+    backdrop-filter: blur(8px); /* Ajout d'un effet de flou */
+    border: 1px solid rgba(245, 158, 11, 0.3); /* Bordure dorée */
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .menu-card:hover {
-    border-color: rgba(245, 158, 11, 0.4);
-    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.9); /* Fond plus sombre au survol */
+    border-color: rgba(245, 158, 11, 0.5); /* Accentuation de la bordure */
+    transform: scale(1.05); /* Zoom léger */
 }
 
 .menu-image {
@@ -1021,17 +1032,18 @@ a {
 .menu-title-row h3 {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
-    color: white;
+    color: #fbbf24; /* Texte doré */
 }
 
 .price-amber {
-    color: #f59e0b;
+    color: #f59e0b; /* Couleur ambrée pour le prix */
     font-weight: 600;
     font-size: 20px;
 }
 
 .menu-content p {
-    color: #9ca3af;
+    color: #e5e7eb; /* Texte clair pour la description */
+    line-height: 1.6;
 }
 
 /* Contact Restaurant */
@@ -1493,12 +1505,37 @@ a {
 }
 
 .trust-item {
-    color: white;
+    background: rgba(30, 41, 59, 0.8); /* Fond sombre avec transparence */
+    border: 1px solid rgba(59, 130, 246, 0.3); /* Bordure bleue */
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.3); /* Légère ombre */
+}
+
+.trust-item:hover {
+    background: rgba(30, 41, 59, 0.9); /* Fond plus sombre au survol */
+    border-color: rgba(59, 130, 246, 0.5); /* Accentuation de la bordure */
+    transform: scale(1.05); /* Zoom léger */
+}
+
+.trust-item h3 {
+    color: #60a5fa; /* Texte bleu clair */
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.trust-item p {
+    color: #e5e7eb; /* Texte clair pour la description */
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 .trust-emoji {
-    font-size: 64px;
+    font-size: 48px;
     margin-bottom: 16px;
+    color: #93c5fd; /* Couleur bleue claire */
 }
 
 .trust-item h3 {
