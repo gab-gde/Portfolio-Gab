@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Développeur Frontend Freelance</title>
+<meta name="description" content="Création de sites web modernes et performants pour PME, artisans et commerces locaux">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav id="navbar" class="navbar">
+<div class="container nav-container">
+<button class="logo-btn" onclick="showPage('home')">
+<div class="logo-icon">
+<i data-lucide="code"></i>
+</div>
+<span class="logo-text">Portfolio</span>
+</button>
+<!-- Desktop Menu -->
+<div class="desktop-menu">
+<button class="nav-btn active" data-page="home" onclick="showPage('home')">Accueil</button>
+<button class="nav-btn" data-page="restaurant" onclick="showPage('restaurant')">Restaurant</button>
+<button class="nav-btn" data-page="boulangerie" onclick="showPage('boulangerie')">Boulangerie</button>
+<button class="nav-btn" data-page="serrurier" onclick="showPage('serrurier')">Serrurier</button>
+</div>
+<!-- Mobile Menu Button -->
+<button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+<i data-lucide="menu" class="menu-icon"></i>
+<i data-lucide="x" class="close-icon hidden"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu hidden">
+<button class="mobile-nav-btn active" data-page="home" onclick="showPage('home'); toggleMobileMenu();">Accueil</button>
+<button class="mobile-nav-btn" data-page="restaurant" onclick="showPage('restaurant'); toggleMobileMenu();">Restaurant</button>
+<button class="mobile-nav-btn" data-page="boulangerie" onclick="showPage('boulangerie'); toggleMobileMenu();">Boulangerie</button>
+<button class="mobile-nav-btn" data-page="serrurier" onclick="showPage('serrurier'); toggleMobileMenu();">Serrurier</button>
+</div>
+</nav>
+<!-- Page Container -->
+<div id="page-container">
+<!-- HOME PAGE -->
+<div id="home-page" class="page active">
+<!-- Hero Section -->
+<div class="hero-home">
+<img src="images/portfolio/hero-bg.png" alt="Background" class="hero-bg-image">
+<div class="hero-overlay"></div>
+<div class="hero-gradient"></div>
+<div class="container hero-content">
+<div class="badge">
+<i data-lucide="code"></i>
+<span>Développeur Frontend Freelance</span>
+</div>
+<h1 class="hero-title">
+<span class="title-white">Sites Vitrine</span><br>
+<span class="title-blue">Sur Mesure</span>
+</h1>
+<p class="hero-subtitle">
+                        Création de sites web modernes et performants pour PME, artisans et commerces locaux. 
+                        Designs uniques qui convertissent vos visiteurs en clients.
+</p>
+<div class="hero-buttons">
+<button class="btn btn-primary" onclick="showPage('restaurant')">
+                            Voir mes réalisations
+<i data-lucide="arrow-right"></i>
+</button>
+<button class="btn btn-secondary" onclick="scrollToContact()">
+                            Me contacter
+</button>
+</div>
+</div>
+</div>
+<!-- Services Section -->
+<section class="services-section">
+<div class="container">
+<h2 class="section-title">Mes Services</h2>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon">
+<i data-lucide="globe"></i>
+</div>
+<h3>Sites Vitrine</h3>
+<p>Des sites web élégants et performants qui reflètent parfaitement votre activité et attirent vos clients.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i data-lucide="palette"></i>
+</div>
+<h3>Design Moderne</h3>
+<p>Interfaces utilisateur contemporaines avec animations fluides et expérience utilisateur optimale.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i data-lucide="code-2"></i>
+</div>
+<h3>Code Propre</h3>
+<p>Développement professionnel avec les dernières technologies web pour un résultat rapide et fiable.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Demos Preview -->
+<section class="demos-section">
+<div class="container">
+<h2 class="section-title">Exemples de Réalisations</h2>
+<p class="section-subtitle">Découvrez 3 sites vitrine de démonstration pour différents secteurs d'activité</p>
+<div class="demos-grid">
+<div class="demo-card" onclick="showPage('restaurant')">
+<div class="demo-image">
+<img src="images/restaurant/hero-bg.png" alt="Restaurant Le Gourmet Parisien">
+<div class="demo-overlay gradient-restaurant"></div>
+</div>
+<div class="demo-content">
+<div class="demo-icon">
+<i data-lucide="chef-hat"></i>
+</div>
+<h3>Le Gourmet Parisien</h3>
+<p class="demo-subtitle">Restaurant Gastronomique</p>
+<p class="demo-desc">Site vitrine élégant pour restaurant haut de gamme</p>
+<div class="demo-link">
+                                    Voir la démo
+<i data-lucide="arrow-right"></i>
+</div>
+</div>
+</div>
+<div class="demo-card" onclick="showPage('boulangerie')">
+<div class="demo-image">
+<img src="images/boulangerie/hero-bg.png" alt="Boulangerie La Mie Dorée">
+<div class="demo-overlay gradient-boulangerie"></div>
+</div>
+<div class="demo-content">
+<div class="demo-icon">
+<i data-lucide="croissant"></i>
+</div>
+<h3>La Mie Dorée</h3>
+<p class="demo-subtitle">Boulangerie Artisanale</p>
+<p class="demo-desc">Interface chaleureuse pour boulangerie traditionnelle</p>
+<div class="demo-link">
+                                    Voir la démo
+<i data-lucide="arrow-right"></i>
+</div>
+</div>
+</div>
+<div class="demo-card" onclick="showPage('serrurier')">
+<div class="demo-image">
+<img src="images/serrurier/hero-bg.png" alt="Serrurier Sécurité Plus">
+<div class="demo-overlay gradient-serrurier"></div>
+</div>
+<div class="demo-content">
+<div class="demo-icon">
+<i data-lucide="key"></i>
+</div>
+<h3>Sécurité Plus</h3>
+<p class="demo-subtitle">Serrurier Professionnel</p>
+<p class="demo-desc">Design rassurant pour services de serrurerie</p>
+<div class="demo-link">
+                                    Voir la démo
+<i data-lucide="arrow-right"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="cta-section" id="contact-section">
+<div class="container cta-container">
+<div class="cta-box">
+<h2>Prêt à développer votre présence en ligne ?</h2>
+<p>Contactez-moi pour discuter de votre projet</p>
+<div class="contact-grid">
+<a href="mailto:gabgoude@icloud.com" class="contact-card">
+<i data-lucide="mail"></i>
+<span class="contact-label">Email</span>
+<span class="contact-value">gabgoude@icloud.com</span>
+</a>
+<a href="https://wa.me/33612345678" target="_blank" rel="noopener noreferrer" class="contact-card">
+<i data-lucide="phone"></i>
+<span class="contact-label">WhatsApp</span>
+<span class="contact-value">06 12 34 56 78</span>
+</a>
+<div class="contact-card">
+<i data-lucide="map-pin"></i>
+<span class="contact-label">Localisation</span>
+<span class="contact-value">Paris, France</span>
+</div>
+</div>
+<a href="mailto:gabgoude@icloud.com" class="btn btn-white">
+                            Demander un devis gratuit
+</a>
+</div>
+</div>
+</section>
+</div>
+<!-- RESTAURANT PAGE -->
+<div id="restaurant-page" class="page">
+<!-- Hero -->
+<div class="hero-restaurant">
+<img src="images/restaurant/hero-bg.png" alt="Restaurant Le Gourmet Parisien" class="hero-bg-image">
+<div class="hero-overlay-dark"></div>
+<div class="hero-content-center">
+<div class="hero-icon-large">
+<i data-lucide="chef-hat"></i>
+</div>
+<h1 class="hero-title-serif">
+                        Le Gourmet<br>
+<span class="text-amber">Parisien</span>
+</h1>
+<div class="divider-gold"></div>
+<p class="hero-subtitle-light">Une expérience culinaire d'exception au cœur de Paris</p>
+<a href="tel:0142567890" class="btn btn-amber">RÉSERVER UNE TABLE</a>
+</div>
+</div>
+<!-- About -->
+<section class="about-restaurant">
+<div class="container">
+<div class="about-grid">
+<div class="about-text">
+<h2 class="title-serif">Notre Histoire</h2>
+<div class="bar-gold"></div>
+<p>Depuis 1985, Le Gourmet Parisien célèbre l'art de la gastronomie française avec passion et excellence. Notre chef étoilé crée des plats qui marient tradition et innovation.</p>
+<p>Chaque assiette raconte une histoire, chaque ingrédient est sélectionné avec soin auprès de producteurs locaux.</p>
+</div>
+<div class="about-images">
+<div class="about-img">
+<img src="images/restaurant/chef.png" alt="Chef">
+</div>
+<div class="about-img">
+<img src="images/restaurant/ambiance.png" alt="Ambiance">
+</div>
+<div class="about-img">
+<img src="images/restaurant/plat-1.png" alt="Plat signature">
+</div>
+<div class="about-img">
+<img src="images/restaurant/plat-2.png" alt="Cuisine">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu -->
+<section class="menu-restaurant">
+<div class="container">
+<div class="menu-header">
+<h2 class="title-serif">Nos Spécialités</h2>
+<div class="divider-gold-center"></div>
+</div>
+<div class="menu-grid">
+<div class="menu-card">
+<div class="menu-image">
+<img src="images/restaurant/plat-1.png" alt="Homard Breton">
+</div>
+<div class="menu-content">
+<div class="menu-title-row">
+<h3 class="title-serif">Homard Breton</h3>
+<span class="price-amber">58€</span>
+</div>
+<p>Homard bleu rôti, légumes de saison</p>
+</div>
+</div>
+<div class="menu-card">
+<div class="menu-image">
+<img src="images/restaurant/plat-2.png" alt="Magret de Canard">
+</div>
+<div class="menu-content">
+<div class="menu-title-row">
+<h3 class="title-serif">Magret de Canard</h3>
+<span class="price-amber">42€</span>
+</div>
+<p>Magret fumé, réduction de fruits rouges</p>
+</div>
+</div>
+<div class="menu-card">
+<div class="menu-image">
+<img src="images/restaurant/plat-3.png" alt="Soufflé Chocolat">
+</div>
+<div class="menu-content">
+<div class="menu-title-row">
+<h3 class="title-serif">Soufflé Chocolat</h3>
+<span class="price-amber">18€</span>
+</div>
+<p>Soufflé chaud, glace vanille bourbon</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="contact-restaurant">
+<div class="container">
+<h2 class="title-serif text-center">Réservation</h2>
+<div class="contact-restaurant-grid">
+<a href="tel:0142567890" class="contact-item">
+<i data-lucide="message-circle"></i>
+<p>01 42 56 78 90</p>
+</a>
+<a href="https://maps.google.com/?q=15+Rue+de+la+Gastronomie+75008+Paris" target="_blank" class="contact-item">
+<i data-lucide="map-pin"></i>
+<p>15 Rue de la Gastronomie<br>75008 Paris</p>
+</a>
+<div class="contact-item">
+<i data-lucide="clock"></i>
+<p>Mar-Sam: 19h-23h<br>Fermé Dim-Lun</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- BOULANGERIE PAGE -->
+<div id="boulangerie-page" class="page">
+<!-- Hero -->
+<div class="hero-boulangerie">
+<img src="images/boulangerie/hero-bg.png" alt="Boulangerie La Mie Dorée" class="hero-bg-image">
+<div class="hero-content-center">
+<i data-lucide="croissant" class="hero-icon-xl"></i>
+<h1 class="hero-title-bold">La Mie Dorée</h1>
+<p class="hero-subtitle-medium">Boulangerie Artisanale depuis 1952</p>
+<p class="hero-desc">Le goût authentique du pain fait main avec amour et tradition</p>
+<button class="btn btn-orange" onclick="scrollToSection('boulangerie-products')">
+                        Découvrir nos produits
+</button>
+</div>
+</div>
+<!-- Products -->
+<section class="products-section" id="boulangerie-products">
+<div class="container">
+<h2 class="section-title orange">Nos Spécialités</h2>
+<div class="products-grid">
+<div class="product-card">
+<div class="product-image">
+<img src="images/boulangerie/baguette.png" alt="Baguette Tradition">
+</div>
+<div class="product-content">
+<h3>Baguette Tradition</h3>
+<p class="product-price">1,20€</p>
+<p class="product-desc">Croustillante et dorée, pétrie à la main</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-image">
+<img src="images/boulangerie/croissants.png" alt="Croissant Pur Beurre">
+</div>
+<div class="product-content">
+<h3>Croissant Pur Beurre</h3>
+<p class="product-price">1,50€</p>
+<p class="product-desc">Feuilleté et fondant, recette traditionnelle</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-image">
+<img src="images/boulangerie/pain-levain.png" alt="Pain au Levain">
+</div>
+<div class="product-content">
+<h3>Pain au Levain</h3>
+<p class="product-price">4,50€</p>
+<p class="product-desc">Fermentation naturelle, farine bio</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-image">
+<img src="images/boulangerie/brioche.png" alt="Brioche Maison">
+</div>
+<div class="product-content">
+<h3>Brioche Maison</h3>
+<p class="product-price">6,80€</p>
+<p class="product-desc">Moelleuse et parfumée, recette familiale</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-image">
+<img src="images/boulangerie/tarte.png" alt="Tarte aux Fruits">
+</div>
+<div class="product-content">
+<h3>Tarte aux Fruits</h3>
+<p class="product-price">3,90€</p>
+<p class="product-desc">Fruits frais de saison, pâte maison</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-image">
+<img src="images/boulangerie/eclair.png" alt="Éclair au Chocolat">
+</div>
+<div class="product-content">
+<h3>Éclair au Chocolat</h3>
+<p class="product-price">3,50€</p>
+<p class="product-desc">Ganache onctueuse, glaçage brillant</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Values -->
+<section class="values-section">
+<img src="images/boulangerie/vitrine.png" alt="Vitrine" class="values-bg">
+<div class="values-overlay"></div>
+<div class="container values-content">
+<h2 class="section-title white">Nos Engagements</h2>
+<div class="values-grid">
+<div class="value-item">
+<div class="value-emoji">🌾</div>
+<h3>Farines Bio</h3>
+<p>Sélection rigoureuse de farines biologiques locales</p>
+</div>
+<div class="value-item">
+<div class="value-emoji">👨‍🍳</div>
+<h3>Savoir-Faire</h3>
+<p>Techniques artisanales transmises depuis 3 générations</p>
+</div>
+<div class="value-item">
+<div class="value-emoji">⏰</div>
+<h3>Fraîcheur</h3>
+<p>Cuisson tout au long de la journée pour garantir la fraîcheur</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="contact-boulangerie">
+<div class="container">
+<div class="contact-box-white">
+<h2 class="section-title orange">Horaires & Contact</h2>
+<div class="contact-boulangerie-grid">
+<div class="contact-section">
+<h3 class="contact-subtitle">
+<i data-lucide="clock"></i>
+                                    Horaires d'ouverture
+</h3>
+<div class="horaires-list">
+<div class="horaire-row">
+<span>Lundi - Vendredi</span>
+<span>6h30 - 20h00</span>
+</div>
+<div class="horaire-row">
+<span>Samedi</span>
+<span>6h30 - 20h30</span>
+</div>
+<div class="horaire-row">
+<span>Dimanche</span>
+<span>7h00 - 13h00</span>
+</div>
+</div>
+</div>
+<div class="contact-section">
+<h3 class="contact-subtitle">
+<i data-lucide="map-pin"></i>
+                                    Nous trouver
+</h3>
+<div class="contact-info">
+<a href="https://maps.google.com/?q=28+Rue+du+Pain+Frais+69001+Lyon" target="_blank" class="contact-link">
+<strong>Adresse</strong><br>
+                                        28 Rue du Pain Frais<br>
+                                        69001 Lyon
+</a>
+<a href="tel:0478294567" target="_blank" rel="noopener noreferrer" class="contact-link">
+<strong>Téléphone</strong><br>
+                                        04 78 29 45 67
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- SERRURIER PAGE -->
+<div id="serrurier-page" class="page">
+<!-- Hero -->
+<div class="hero-serrurier">
+<img src="images/serrurier/hero-bg.png" alt="Serrurier Sécurité Plus" class="hero-bg-image">
+<div class="hero-overlay-blue"></div>
+<div class="hero-content-center">
+<div class="hero-icon-shield">
+<i data-lucide="shield"></i>
+</div>
+<h1 class="hero-title-bold white">Sécurité Plus</h1>
+<p class="hero-subtitle-blue">Serrurier Professionnel 24/7</p>
+<p class="hero-desc white">Intervention rapide et professionnelle pour tous vos problèmes de serrurerie. Devis gratuit, tarifs transparents.</p>
+<div class="hero-buttons">
+<a href="tel:0612345678" class="btn btn-blue">
+<i data-lucide="message-circle"></i>
+                            06 12 34 56 78
+</a>
+<button class="btn btn-outline-white" onclick="scrollToSection('serrurier-contact')">
+                            Devis gratuit
+</button>
+</div>
+</div>
+</div>
+<!-- Services -->
+<section class="services-serrurier">
+<div class="container">
+<h2 class="section-title white">Nos Services</h2>
+<p class="section-subtitle gray">Intervention rapide en moins de 30 minutes</p>
+<div class="services-serrurier-grid">
+<div class="service-serrurier-card">
+<div class="service-icon-blue">
+<i data-lucide="lock"></i>
+</div>
+<h3>Ouverture de Porte</h3>
+<p>Porte claquée ou fermée ? Intervention sans casse dans 90% des cas</p>
+<p class="service-price">À partir de 89€</p>
+</div>
+<div class="service-serrurier-card">
+<div class="service-icon-blue">
+<i data-lucide="key"></i>
+</div>
+<h3>Changement de Serrure</h3>
+<p>Remplacement de serrures anciennes ou endommagées. Toutes marques.</p>
+<p class="service-price">À partir de 129€</p>
+</div>
+<div class="service-serrurier-card">
+<div class="service-icon-blue">
+<i data-lucide="shield"></i>
+</div>
+<h3>Blindage de Porte</h3>
+<p>Renforcez la sécurité de votre domicile avec nos solutions certifiées</p>
+<p class="service-price">Sur devis</p>
+</div>
+<div class="service-serrurier-card">
+<div class="service-icon-blue">
+<i data-lucide="users"></i>
+</div>
+<h3>Dépannage Urgent</h3>
+<p>Service d'urgence 24h/24, 7j/7. Techniciens disponibles immédiatement</p>
+<p class="service-price">Intervention rapide</p>
+</div>
+<div class="service-serrurier-card">
+<div class="service-icon-blue">
+<i data-lucide="key"></i>
+</div>
+<h3>Reproduction de Clés</h3>
+<p>Duplication de clés, clés de sécurité, clés automobile</p>
+<p class="service-price">À partir de 15€</p>
+</div>
+<div class="service-serrurier-card">
+<div class="service-icon-blue">
+<i data-lucide="lock"></i>
+</div>
+<h3>Installation Coffre-fort</h3>
+<p>Conseil et installation de coffres-forts pour particuliers et professionnels</p>
+<p class="service-price">Sur devis</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust -->
+<section class="trust-section">
+<div class="container">
+<h2 class="section-title white">Pourquoi Nous Choisir ?</h2>
+<div class="trust-grid">
+<div class="trust-item">
+<div class="trust-emoji">⚡</div>
+<h3>24/7</h3>
+<p>Disponibilité permanente</p>
+</div>
+<div class="trust-item">
+<div class="trust-emoji">✓</div>
+<h3>Certifié</h3>
+<p>Artisan RGE certifié</p>
+</div>
+<div class="trust-item">
+<div class="trust-emoji">💰</div>
+<h3>Transparent</h3>
+<p>Devis gratuit détaillé</p>
+</div>
+<div class="trust-item">
+<div class="trust-emoji">⭐</div>
+<h3>4.9/5</h3>
+<p>Note clients (850 avis)</p>
+</div>
+</div>
+<!-- Gallery -->
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="images/serrurier/intervention.png" alt="Intervention serrurier">
+</div>
+<div class="gallery-item">
+<img src="images/serrurier/serrures.png" alt="Serrures professionnelles">
+</div>
+<div class="gallery-item">
+<img src="images/serrurier/technicien.png" alt="Technicien professionnel">
+</div>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="contact-serrurier" id="serrurier-contact">
+<div class="container">
+<div class="contact-box-blue">
+<h2 class="section-title white">Besoin d'un Serrurier ?</h2>
+<p class="section-subtitle white">Intervention en moins de 30 minutes sur Paris et région</p>
+<div class="contact-serrurier-grid">
+<a href="tel:0612345678" class="contact-serrurier-card">
+<i data-lucide="message-circle"></i>
+<span class="contact-label">WhatsApp</span>
+<span class="contact-value-large">06 12 34 56 78</span>
+</a>
+<a href="mailto:gabgoude@icloud.com" class="contact-serrurier-card">
+<i data-lucide="mail"></i>
+<span class="contact-label">Email</span>
+<span class="contact-value">gabgoude@icloud.com</span>
+</a>
+<div class="contact-serrurier-card">
+<i data-lucide="map-pin"></i>
+<span class="contact-label">Zone d'intervention</span>
+<span class="contact-value">Paris & Île-de-France</span>
+</div>
+</div>
+<a href="mailto:gabgoude@icloud.com" class="btn btn-white-large">
+                            Demander un devis gratuit
+</a>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+</body>
+</html>

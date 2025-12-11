@@ -1,0 +1,34 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Build files (not needed for this static site but good practice)
+dist/
+build/
+
+# Dependencies (not used but good to have)
+node_modules/
+
+# Netlify
+.netlify/
