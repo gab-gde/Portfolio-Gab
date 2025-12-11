@@ -357,6 +357,164 @@ a {
     transform: scale(1.05);
 }
 
+/* About Section */
+.about-section {
+    padding: 96px 24px;
+    background: linear-gradient(135deg, rgb(2, 6, 23), rgb(15, 23, 42));
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    padding: 8px 16px;
+    margin-bottom: 24px;
+}
+
+.section-badge svg {
+    width: 16px;
+    height: 16px;
+    stroke: #60a5fa;
+}
+
+.section-badge span {
+    color: #93c5fd;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.section-title-left {
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin-bottom: 24px;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(to right, #60a5fa, #93c5fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.about-image {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.image-decoration {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1));
+    border-radius: 16px;
+}
+
+.tech-stack {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 48px;
+}
+
+.tech-item {
+    background: rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 12px 24px;
+    border-radius: 9999px;
+    color: #93c5fd;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: scale(1.05);
+}
+
+/* Services Section */
+.services-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.services-subtitle {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-top: 16px;
+}
+
+.service-features {
+    list-style: none;
+    margin-top: 24px;
+    padding: 0;
+}
+
+.service-features li {
+    color: #cbd5e1;
+    padding: 8px 0;
+    padding-left: 28px;
+    position: relative;
+}
+
+.service-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #60a5fa;
+    font-weight: 700;
+}
+
 /* Services Section */
 .services-section {
     padding: 96px 24px;
@@ -486,7 +644,7 @@ a {
 }
 
 .demo-card:hover .demo-overlay {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .gradient-restaurant {
@@ -935,7 +1093,7 @@ a {
 .hero-boulangerie .hero-bg-image {
     position: absolute;
     inset: 0;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .hero-icon-xl {
@@ -1479,6 +1637,30 @@ a {
     .contact-box-blue {
         padding: 32px 24px;
     }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    .tech-stack {
+        padding: 24px;
+        gap: 12px;
+    }
+    
+    .tech-item {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
 
 @media (min-width: 769px) {
@@ -1494,4 +1676,547 @@ a {
 
 .white {
     color: white !important;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Délais pour les animations en cascade */
+.fade-in:nth-child(1) { transition-delay: 0.1s; }
+.fade-in:nth-child(2) { transition-delay: 0.2s; }
+.fade-in:nth-child(3) { transition-delay: 0.3s; }
+.fade-in:nth-child(4) { transition-delay: 0.4s; }
+.fade-in:nth-child(5) { transition-delay: 0.5s; }
+.fade-in:nth-child(6) { transition-delay: 0.6s; }
+
+/* ===== ABOUT VISUAL CARDS ===== */
+.about-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.visual-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.visual-card:hover {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2);
+}
+
+.visual-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.2));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.visual-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: #60a5fa;
+}
+
+.visual-text {
+    flex: 1;
+}
+
+.visual-number {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(to right, #60a5fa, #93c5fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.visual-label {
+    font-size: 14px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* Responsive pour visual cards */
+@media (max-width: 768px) {
+    .about-visual {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .visual-card {
+        padding: 24px 20px;
+    }
+    
+    .visual-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .visual-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .visual-number {
+        font-size: 28px;
+    }
+}
+
+/* ===== PROCESS SECTION ===== */
+.process-section {
+    padding: 96px 24px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    position: relative;
+    overflow: hidden;
+}
+
+.process-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.process-subtitle {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-top: 16px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.process-step {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+    padding: 32px 24px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-8px);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2);
+}
+
+.step-number {
+    position: absolute;
+    top: -16px;
+    left: 24px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.5);
+}
+
+.step-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0 20px 0;
+}
+
+.step-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: #60a5fa;
+}
+
+.process-step h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.process-step p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.process-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.process-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 9999px;
+    padding: 12px 24px;
+}
+
+.process-badge svg {
+    width: 20px;
+    height: 20px;
+    stroke: #60a5fa;
+}
+
+.process-badge span {
+    color: #93c5fd;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Responsive Process Section */
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .process-cta {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* ===== FONT AWESOME ICONS FIX ===== */
+/* Forcer la couleur des icônes Font Awesome */
+.fas, .fab, .far, .fa {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Icônes dans la navigation */
+.logo-icon .fas,
+.badge .fas {
+    color: #3b82f6 !important;
+}
+
+.menu-icon, .close-icon {
+    color: white !important;
+}
+
+/* Icônes dans les boutons */
+.btn .fas, .btn .fab {
+    color: inherit !important;
+}
+
+/* Icônes dans les cards */
+.service-icon .fas,
+.demo-icon .fas,
+.step-icon .fas,
+.visual-icon .fas {
+    color: #60a5fa !important;
+}
+
+/* Icônes de contact */
+.contact-card .fas,
+.contact-card .fab {
+    color: #3b82f6 !important;
+}
+
+.contact-item .fas {
+    color: #d97706 !important;
+}
+
+.contact-serrurier-card .fas {
+    color: #3b82f6 !important;
+}
+
+/* Icônes dans les sections spécifiques */
+.service-icon-blue .fas {
+    color: #60a5fa !important;
+}
+
+.hero-icon-large .fas,
+.hero-icon-xl,
+.hero-icon-shield .fas {
+    color: inherit !important;
+}
+
+/* Section badges */
+.section-badge .fas {
+    color: #3b82f6 !important;
+}
+
+.process-badge .fas {
+    color: #60a5fa !important;
+}
+
+/* Tous les i avec Font Awesome en blanc par défaut dans les sections sombres */
+.hero-home .fas,
+.hero-home .fab,
+.process-section .fas {
+    color: white !important;
+}
+
+/* Surcharge spécifique pour les icônes qui doivent rester bleues */
+.hero-buttons .fas {
+    color: white !important;
+}
+
+.contact-subtitle .fas {
+    color: #ea580c !important;
+}
+
+/* ===== ICÔNES PERSONNALISÉES (SVG) ===== */
+
+/* Taille et affichage de base */
+.icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+/* Icônes dans le logo et badge */
+.logo-icon .icon {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(2234%) hue-rotate(201deg) brightness(103%) contrast(91%);
+    /* Bleu #3b82f6 */
+}
+
+.badge .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(2234%) hue-rotate(201deg) brightness(103%) contrast(91%);
+}
+
+/* Menu mobile (hamburger et close) */
+.menu-icon .icon,
+.close-icon .icon {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+    /* Blanc */
+}
+
+/* Icônes dans les boutons */
+.btn .icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    filter: brightness(0) invert(1);
+    /* Blanc */
+}
+
+.btn-secondary .icon,
+.btn-outline .icon {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(2234%) hue-rotate(201deg) brightness(103%) contrast(91%);
+    /* Bleu */
+}
+
+/* Icônes de services */
+.service-icon .icon {
+    width: 48px;
+    height: 48px;
+    filter: brightness(0) saturate(100%) invert(60%) sepia(66%) saturate(2726%) hue-rotate(202deg) brightness(100%) contrast(95%);
+    /* Bleu clair #60a5fa */
+}
+
+/* Icônes de démo */
+.demo-icon .icon {
+    width: 56px;
+    height: 56px;
+    filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(2234%) hue-rotate(201deg) brightness(103%) contrast(91%);
+}
+
+/* Section Badge (À propos) */
+.section-badge .icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(2234%) hue-rotate(201deg) brightness(103%) contrast(91%);
+}
+
+/* Icônes visuelles (cartes métriques) */
+.visual-icon .icon {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(60%) sepia(66%) saturate(2726%) hue-rotate(202deg) brightness(100%) contrast(95%);
+}
+
+/* Icônes de process (Comment ça se passe) */
+.step-icon .icon {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+    /* Blanc */
+}
+
+.process-badge .icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(60%) sepia(66%) saturate(2726%) hue-rotate(202deg) brightness(100%) contrast(95%);
+}
+
+/* Icônes de contact */
+.contact-card .icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+    filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(2234%) hue-rotate(201deg) brightness(103%) contrast(91%);
+}
+
+/* Restaurant - Icônes dorées/ambrées */
+.hero-icon-large .icon {
+    width: 80px;
+    height: 80px;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(55%) saturate(2453%) hue-rotate(358deg) brightness(99%) contrast(102%);
+    /* Doré #fbbf24 */
+}
+
+.contact-item .icon {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(55%) saturate(2453%) hue-rotate(358deg) brightness(99%) contrast(102%);
+}
+
+/* Boulangerie - Icônes oranges */
+.hero-icon-xl {
+    width: 100px;
+    height: 100px;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(83%) saturate(3605%) hue-rotate(359deg) brightness(101%) contrast(102%);
+    /* Orange #f97316 */
+}
+
+.contact-subtitle .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(83%) saturate(3605%) hue-rotate(359deg) brightness(101%) contrast(102%);
+}
+
+/* Serrurier - Icônes bleues */
+.hero-icon-shield .icon {
+    width: 80px;
+    height: 80px;
+    filter: brightness(0) saturate(100%) invert(60%) sepia(66%) saturate(2726%) hue-rotate(202deg) brightness(100%) contrast(95%);
+}
+
+.service-icon-blue .icon {
+    width: 48px;
+    height: 48px;
+    filter: brightness(0) saturate(100%) invert(60%) sepia(66%) saturate(2726%) hue-rotate(202deg) brightness(100%) contrast(95%);
+}
+
+.contact-serrurier-card .icon {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(2234%) hue-rotate(201deg) brightness(103%) contrast(91%);
+}
+
+/* Hover effects */
+.service-card:hover .service-icon .icon,
+.demo-card:hover .demo-icon .icon {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-icon-large .icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .hero-icon-xl {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .service-icon .icon {
+        width: 40px;
+        height: 40px;
+    }
 }

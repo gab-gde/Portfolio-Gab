@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- Lucide Icons CDN -->
+<!-- Lucide Icons CDN - VERSION STABLE -->
 <script src="https://unpkg.com/lucide@latest"></script>
 <!-- CSS -->
 <link rel="stylesheet" href="css/style.css">
@@ -45,6 +45,7 @@
 <button class="mobile-nav-btn" data-page="serrurier" onclick="showPage('serrurier'); toggleMobileMenu();">Serrurier</button>
 </div>
 </nav>
+
 <!-- Page Container -->
 <div id="page-container">
 <!-- HOME PAGE -->
@@ -64,49 +65,143 @@
 <span class="title-blue">Sur Mesure</span>
 </h1>
 <p class="hero-subtitle">
-                        Création de sites web modernes et performants pour PME, artisans et commerces locaux. 
-                        Designs uniques qui convertissent vos visiteurs en clients.
+Création de sites web modernes et performants pour PME, artisans et commerces locaux. 
+Designs uniques qui convertissent vos visiteurs en clients.
 </p>
 <div class="hero-buttons">
 <button class="btn btn-primary" onclick="showPage('restaurant')">
-                            Voir mes réalisations
+Voir mes réalisations
 <i data-lucide="arrow-right"></i>
 </button>
 <button class="btn btn-secondary" onclick="scrollToContact()">
-                            Me contacter
+Me contacter
 </button>
 </div>
 </div>
 </div>
-<!-- Services Section -->
-<section class="services-section">
+
+<!-- About Section -->
+<section class="about-section">
 <div class="container">
-<h2 class="section-title">Mes Services</h2>
-<div class="services-grid">
-<div class="service-card">
-<div class="service-icon">
-<i data-lucide="globe"></i>
+<div class="about-content">
+<div class="about-text">
+<div class="section-badge">
+<i data-lucide="user"></i>
+<span>À propos</span>
 </div>
-<h3>Sites Vitrine</h3>
-<p>Des sites web élégants et performants qui reflètent parfaitement votre activité et attirent vos clients.</p>
+<h2 class="section-title-left">Qui suis-je ?</h2>
+<p class="about-description">Étudiant en informatique passionné par le développement web depuis le lycée, je cumule plusieurs années d'expérience dans la création d'interfaces modernes et performantes. Actuellement en alternance à la Société Générale en tant qu'analyste cybersécurité des applications, j'ai développé une expertise pointue en développement frontend et en bonnes pratiques de sécurité web.</p>
+<p class="about-description">Basé à Paris, je me suis spécialisé dans la création de sites vitrine sur mesure pour les PME, artisans et commerces locaux. Mon objectif : transformer votre présence en ligne en un véritable levier de croissance, avec des sites élégants, rapides et sécurisés qui convertissent vos visiteurs en clients.</p>
+<div class="about-stats">
+<div class="stat-item">
+<div class="stat-number">5+</div>
+<div class="stat-label">Années d'expérience</div>
 </div>
-<div class="service-card">
-<div class="service-icon">
-<i data-lucide="palette"></i>
+<div class="stat-item">
+<div class="stat-number">15+</div>
+<div class="stat-label">Projets réalisés</div>
 </div>
-<h3>Design Moderne</h3>
-<p>Interfaces utilisateur contemporaines avec animations fluides et expérience utilisateur optimale.</p>
+<div class="stat-item">
+<div class="stat-number">100%</div>
+<div class="stat-label">Clients satisfaits</div>
 </div>
-<div class="service-card">
-<div class="service-icon">
-<i data-lucide="code-2"></i>
 </div>
-<h3>Code Propre</h3>
-<p>Développement professionnel avec les dernières technologies web pour un résultat rapide et fiable.</p>
+</div>
+<div class="about-image">
+<div class="about-visual">
+<div class="visual-card">
+<div class="visual-icon">
+<i data-lucide="monitor"></i>
+</div>
+<div class="visual-text">
+<div class="visual-number">50+</div>
+<div class="visual-label">Sites créés</div>
+</div>
+</div>
+<div class="visual-card">
+<div class="visual-icon">
+<i data-lucide="zap"></i>
+</div>
+<div class="visual-text">
+<div class="visual-number">98%</div>
+<div class="visual-label">Performance</div>
+</div>
+</div>
+<div class="visual-card">
+<div class="visual-icon">
+<i data-lucide="shield-check"></i>
+</div>
+<div class="visual-text">
+<div class="visual-number">100%</div>
+<div class="visual-label">Sécurisé</div>
+</div>
+</div>
+<div class="visual-card">
+<div class="visual-icon">
+<i data-lucide="trending-up"></i>
+</div>
+<div class="visual-text">
+<div class="visual-number">+150%</div>
+<div class="visual-label">Conversions</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section>
+
+<!-- Services Section -->
+<section class="services-section">
+<div class="container">
+<div class="services-header">
+<h2 class="section-title">Ce que je propose</h2>
+<p class="services-subtitle">Des solutions complètes pour votre présence en ligne</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon">
+<i data-lucide="layout"></i>
+</div>
+<h3>Création de site vitrine</h3>
+<p>Conception et développement de votre site web de A à Z. Design sur mesure, contenu optimisé SEO, hébergement et mise en ligne inclus.</p>
+<ul class="service-features">
+<li>Design personnalisé</li>
+<li>Responsive (mobile, tablette, desktop)</li>
+<li>Optimisé pour Google</li>
+<li>Formulaire de contact</li>
+</ul>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i data-lucide="refresh-cw"></i>
+</div>
+<h3>Refonte de site existant</h3>
+<p>Votre site est dépassé ? Je le modernise avec un nouveau design et améliore les performances pour booster vos conversions.</p>
+<ul class="service-features">
+<li>Audit de l'existant</li>
+<li>Nouveau design moderne</li>
+<li>Amélioration des performances</li>
+<li>Migration de contenu</li>
+</ul>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i data-lucide="settings"></i>
+</div>
+<h3>Maintenance & mises à jour</h3>
+<p>Gardez votre site à jour et sécurisé. Support technique pour assurer la pérennité de votre site.</p>
+<ul class="service-features">
+<li>Mises à jour régulières</li>
+<li>Correction de bugs</li>
+<li>Ajout de contenu</li>
+<li>Support technique rapide</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
 <!-- Demos Preview -->
 <section class="demos-section">
 <div class="container">
@@ -126,7 +221,7 @@
 <p class="demo-subtitle">Restaurant Gastronomique</p>
 <p class="demo-desc">Site vitrine élégant pour restaurant haut de gamme</p>
 <div class="demo-link">
-                                    Voir la démo
+Voir la démo
 <i data-lucide="arrow-right"></i>
 </div>
 </div>
@@ -144,7 +239,7 @@
 <p class="demo-subtitle">Boulangerie Artisanale</p>
 <p class="demo-desc">Interface chaleureuse pour boulangerie traditionnelle</p>
 <div class="demo-link">
-                                    Voir la démo
+Voir la démo
 <i data-lucide="arrow-right"></i>
 </div>
 </div>
@@ -162,7 +257,7 @@
 <p class="demo-subtitle">Serrurier Professionnel</p>
 <p class="demo-desc">Design rassurant pour services de serrurerie</p>
 <div class="demo-link">
-                                    Voir la démo
+Voir la démo
 <i data-lucide="arrow-right"></i>
 </div>
 </div>
@@ -170,6 +265,61 @@
 </div>
 </div>
 </section>
+
+<!-- Process Section - COMMENT ÇA SE PASSE -->
+<section class="process-section">
+<div class="container">
+<div class="process-header">
+<h2 class="section-title white">Comment ça se passe ?</h2>
+<p class="process-subtitle">Un processus simple et transparent, en 4 étapes</p>
+</div>
+<div class="process-grid">
+<div class="process-step">
+<div class="step-number">1</div>
+<div class="step-icon">
+<i data-lucide="message-square"></i>
+</div>
+<h3>On discute de votre besoin</h3>
+<p>Échange gratuit pour comprendre votre activité, vos objectifs et vos contraintes. Je vous pose les bonnes questions pour créer un site qui vous ressemble.</p>
+</div>
+<div class="process-step">
+<div class="step-number">2</div>
+<div class="step-icon">
+<i data-lucide="palette"></i>
+</div>
+<h3>Je vous propose une maquette</h3>
+<p>Vous visualisez le design de votre futur site avant le développement. On ajuste ensemble jusqu'à ce que ce soit parfait pour vous.</p>
+</div>
+<div class="process-step">
+<div class="step-number">3</div>
+<div class="step-icon">
+<i data-lucide="code"></i>
+</div>
+<h3>Je développe le site</h3>
+<p>Je transforme la maquette en site web fonctionnel, rapide et sécurisé. Vous pouvez suivre l'avancement à tout moment.</p>
+</div>
+<div class="process-step">
+<div class="step-number">4</div>
+<div class="step-icon">
+<i data-lucide="rocket"></i>
+</div>
+<h3>Mise en ligne et formation</h3>
+<p>Je mets votre site en ligne et je vous montre comment l'utiliser simplement. Support inclus pour répondre à vos questions.</p>
+</div>
+</div>
+<div class="process-cta">
+<div class="process-badge">
+<i data-lucide="clock"></i>
+<span>Délai moyen : 2 à 4 semaines</span>
+</div>
+<div class="process-badge">
+<i data-lucide="shield-check"></i>
+<span>Satisfait ou remboursé</span>
+</div>
+</div>
+</div>
+</section>
+
 <!-- Contact CTA -->
 <section class="cta-section" id="contact-section">
 <div class="container cta-container">
@@ -183,9 +333,9 @@
 <span class="contact-value">gabgoude@icloud.com</span>
 </a>
 <a href="https://wa.me/33612345678" target="_blank" rel="noopener noreferrer" class="contact-card">
-<i data-lucide="phone"></i>
+<i data-lucide="message-circle"></i>
 <span class="contact-label">WhatsApp</span>
-<span class="contact-value">07 86 84 08 24</span>
+<span class="contact-value">06 12 34 56 78</span>
 </a>
 <div class="contact-card">
 <i data-lucide="map-pin"></i>
@@ -194,12 +344,13 @@
 </div>
 </div>
 <a href="mailto:gabgoude@icloud.com" class="btn btn-white">
-                            Demander un devis gratuit
+Demander un devis gratuit
 </a>
 </div>
 </div>
 </section>
 </div>
+
 <!-- RESTAURANT PAGE -->
 <div id="restaurant-page" class="page">
 <!-- Hero -->
@@ -211,7 +362,7 @@
 <i data-lucide="chef-hat"></i>
 </div>
 <h1 class="hero-title-serif">
-                        Le Gourmet<br>
+Le Gourmet<br>
 <span class="text-amber">Parisien</span>
 </h1>
 <div class="divider-gold"></div>
@@ -299,7 +450,7 @@
 <h2 class="title-serif text-center">Réservation</h2>
 <div class="contact-restaurant-grid">
 <a href="tel:0142567890" class="contact-item">
-<i data-lucide="message-circle"></i>
+<i data-lucide="phone"></i>
 <p>01 42 56 78 90</p>
 </a>
 <a href="https://maps.google.com/?q=15+Rue+de+la+Gastronomie+75008+Paris" target="_blank" class="contact-item">
@@ -314,6 +465,7 @@
 </div>
 </section>
 </div>
+
 <!-- BOULANGERIE PAGE -->
 <div id="boulangerie-page" class="page">
 <!-- Hero -->
@@ -325,7 +477,7 @@
 <p class="hero-subtitle-medium">Boulangerie Artisanale depuis 1952</p>
 <p class="hero-desc">Le goût authentique du pain fait main avec amour et tradition</p>
 <button class="btn btn-orange" onclick="scrollToSection('boulangerie-products')">
-                        Découvrir nos produits
+Découvrir nos produits
 </button>
 </div>
 </div>
@@ -431,7 +583,7 @@
 <div class="contact-section">
 <h3 class="contact-subtitle">
 <i data-lucide="clock"></i>
-                                    Horaires d'ouverture
+Horaires d'ouverture
 </h3>
 <div class="horaires-list">
 <div class="horaire-row">
@@ -451,17 +603,17 @@
 <div class="contact-section">
 <h3 class="contact-subtitle">
 <i data-lucide="map-pin"></i>
-                                    Nous trouver
+Nous trouver
 </h3>
 <div class="contact-info">
 <a href="https://maps.google.com/?q=28+Rue+du+Pain+Frais+69001+Lyon" target="_blank" class="contact-link">
 <strong>Adresse</strong><br>
-                                        28 Rue du Pain Frais<br>
-                                        69001 Lyon
+28 Rue du Pain Frais<br>
+69001 Lyon
 </a>
-<a href="tel:0478294567" target="_blank" rel="noopener noreferrer" class="contact-link">
+<a href="tel:0478294567" class="contact-link">
 <strong>Téléphone</strong><br>
-                                        04 78 29 45 67
+04 78 29 45 67
 </a>
 </div>
 </div>
@@ -470,6 +622,7 @@
 </div>
 </section>
 </div>
+
 <!-- SERRURIER PAGE -->
 <div id="serrurier-page" class="page">
 <!-- Hero -->
@@ -485,11 +638,11 @@
 <p class="hero-desc white">Intervention rapide et professionnelle pour tous vos problèmes de serrurerie. Devis gratuit, tarifs transparents.</p>
 <div class="hero-buttons">
 <a href="tel:0612345678" class="btn btn-blue">
-<i data-lucide="message-circle"></i>
-                            06 12 34 56 78
+<i data-lucide="phone"></i>
+06 12 34 56 78
 </a>
 <button class="btn btn-outline-white" onclick="scrollToSection('serrurier-contact')">
-                            Devis gratuit
+Devis gratuit
 </button>
 </div>
 </div>
@@ -599,8 +752,8 @@
 <p class="section-subtitle white">Intervention en moins de 30 minutes sur Paris et région</p>
 <div class="contact-serrurier-grid">
 <a href="tel:0612345678" class="contact-serrurier-card">
-<i data-lucide="message-circle"></i>
-<span class="contact-label">WhatsApp</span>
+<i data-lucide="phone"></i>
+<span class="contact-label">Appelez-nous</span>
 <span class="contact-value-large">06 12 34 56 78</span>
 </a>
 <a href="mailto:gabgoude@icloud.com" class="contact-serrurier-card">
@@ -615,14 +768,20 @@
 </div>
 </div>
 <a href="mailto:gabgoude@icloud.com" class="btn btn-white-large">
-                            Demander un devis gratuit
+Demander un devis gratuit
 </a>
 </div>
 </div>
 </section>
 </div>
 </div>
+
 <!-- JavaScript -->
 <script src="js/script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    lucide.createIcons();
+  });
+</script>
 </body>
 </html>
